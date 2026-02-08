@@ -1,5 +1,3 @@
-**/*.env
-**/*.list
 .DS_Store
 .idea
 .vscode

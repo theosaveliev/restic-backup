@@ -11,7 +11,7 @@ With that in mind, let’s design a backup system for a personal laptop.
 
 ### Overview
 
-![General overview](https://github.com/theosaveliev/restic-backup/raw/main/diagram/backup_overview.png)
+![General overview](https://github.com/theosaveliev/restic-backup/raw/main/diagrams/backup_overview.png)
 
 ### Key points
 - **No central system:**\
@@ -109,9 +109,13 @@ If that’s unacceptable, the alternatives are limited:
 - Exclude source code from the backup (not an option here, since that’s a major reason for backing up).
 - Use a separate laptop for sensitive projects.
 
+Since reviewing the Path list is the only use-case for the Information Classifier, I replaced a proper security guard with file manager tags:
+
+![Finder tags](https://github.com/theosaveliev/restic-backup/raw/main/screenshots/tags.png)
+
 ### Key management
 ￼
-![Init keys flowchart](https://github.com/theosaveliev/restic-backup/raw/main/diagram/restic_init_keys.png)
+![Init keys flowchart](https://github.com/theosaveliev/restic-backup/raw/main/diagrams/restic_init_keys.png)
 
 The flow is executed during `restic init`, when the repository Access key is created. At this point, the Master key used for data encryption is generated.
 
