@@ -19,7 +19,7 @@ With that in mind, let’s design a backup system for a personal laptop.
 - **Full dataset everywhere:**\
   All Backup Repositories store a complete copy of the dataset.
 - **Multiple independent cloud locations:**\
-  In this example, Google Drive and Mega are used. Both claim reliable storage, but real-world risks still exist - network outages, data center fires, or account lockouts. Restic uses rclone as a backend, which enables integration with many providers (67 [supported](https://rclone.org/#providers) out of the box).
+  In this example, Google Drive and Drime are used. Both claim reliable storage, but real-world risks still exist - network outages, data center fires, or account lockouts. Restic uses rclone as a backend, which enables integration with many providers (67 [supported](https://rclone.org/#providers) out of the box).
 - **Multiple independent offline disks:**\
   Two separate offline disks are used, so a disk can fail together with its controller or USB interface.
 - **Client-side encryption:**\
