@@ -54,12 +54,12 @@ Example .env file:
 
 ```
 RESTIC_REPOSITORY=rclone:google:backup
-RESTIC_PASSWORD_FILE=$HOME/.restic/password
+RESTIC_PASSWORD_COMMAND="soda kdf laptop.passw -e base94"
 RESTIC_FILES_FROM_FILE=$HOME/.restic/path.list
 ```
 
 - `RESTIC_REPOSITORY` maps directly to the `--repo` argument of the `restic` command.
-- `RESTIC_PASSWORD_FILE` points to the file containing the repository password.
+- `RESTIC_PASSWORD_COMMAND` is a shell command to obtain the repository password.
 - `RESTIC_FILES_FROM_FILE` is a newline-separated list of filesystem paths to be backed up.
 
 ### Path list
