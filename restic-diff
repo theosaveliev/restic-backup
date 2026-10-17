@@ -11,4 +11,4 @@ ENV_FILE="$1"
 . "$ENV_FILE"
 shift
 
-restic diff $(restic snapshots --latest 2 --json | jq -r '.[].id') "$@"
+restic diff $(restic snapshots --latest 2 --group-by host --json | jq -r '.[].snapshots[].id') "$@"
